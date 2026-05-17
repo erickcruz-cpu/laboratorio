@@ -42,11 +42,16 @@ body {
 }
 
 #navbar-clock-info {
-    font-size: 0.95rem;
-    font-weight: 500;
-    color: #dbeafe;
-    font-family: 'Segoe UI', sans-serif;
-    letter-spacing: 0.02em;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+    font-family: 'JetBrains Mono', 'Consolas', monospace;
+    letter-spacing: 0.05em;
+    text-shadow: 0 0 10px rgba(59, 130, 246, 0.8), 0 0 20px rgba(59, 130, 246, 0.4);
+    background: rgba(255, 255, 255, 0.05);
+    padding: 4px 12px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* Navbar Minimalista */
@@ -69,7 +74,14 @@ body {
     height: 65px;
     width: auto;
     opacity: 0.98;
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.4s ease, opacity 0.3s ease;
+    cursor: pointer;
+}
+
+.logo img:hover {
+    transform: scale(1.1) rotate(2deg);
+    filter: brightness(1.1) drop-shadow(0 0 15px rgba(37, 99, 235, 0.8));
+    opacity: 1;
 }
 
 .nav-links {
@@ -469,29 +481,72 @@ input[type="radio"] {
     padding: 0 5%;
 }
 
+/* Rediseño de Normas con Efectos Premium */
 .norma-item {
-    background: rgba(254, 226, 226, 0.88);
-    padding: 18px 22px;
-    border-radius: 16px;
-    border: 1px solid rgba(248, 113, 113, 0.65);
+    background: #ffffff;
+    padding: 20px 25px;
+    border-radius: 20px;
+    border: 1px solid rgba(226, 232, 240, 0.8);
     display: flex;
     align-items: center;
-    gap: 14px;
+    gap: 18px;
     font-family: 'Inter', sans-serif;
-    font-size: 1rem;
-    color: #991b1b;
-    font-weight: 600;
-    box-shadow: 0 10px 20px rgba(244, 63, 94, 0.08);
+    font-size: 1.05rem;
+    color: var(--text-color);
+    font-weight: 500;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     width: 100%;
-    max-width: 500px;
+    max-width: 550px;
     margin: 0 auto;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+    text-align: left;
+}
+
+.norma-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 100%;
+    background: var(--danger-color);
+    opacity: 0.8;
+}
+
+.norma-item:hover {
+    transform: translateX(10px) scale(1.02);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    border-color: var(--danger-color);
 }
 
 .norma-icon {
-    font-size: 1.4rem;
-    color: #dc2626;
-    min-width: 32px;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 45px;
+    height: 45px;
+    background: rgba(239, 68, 68, 0.1);
+    border-radius: 12px;
+    color: var(--danger-color);
+    transition: transform 0.3s ease;
+}
+
+.norma-item:hover .norma-icon {
+    transform: rotate(-10deg) scale(1.2);
+    background: var(--danger-color);
+    color: white;
+}
+
+.norma-icon svg {
+    width: 24px;
+    height: 24px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
 }
 
 .norma-item span:last-child {
@@ -691,12 +746,13 @@ footer {
 
 .software-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 28px;
     margin-top: 40px;
     margin-left: auto;
     margin-right: auto;
     align-items: stretch;
+    max-width: 1000px; /* Limitamos el ancho para que 3 columnas se vean bien */
 }
 
 .download-container {
@@ -719,16 +775,17 @@ footer {
     animation: fadeIn 0.8s ease-out;
 }
 
-/* Smooth Scrolling */
+/* Smooth Scrolling y Ajuste de Navegación */
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 80px;
+    scroll-padding-top: 90px; /* Ajustado para que el título quede justo debajo de la navbar */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
-section {
-    scroll-margin-top: 80px;
+.section {
+    padding: 60px 5% 80px; /* Reducido el padding superior para evitar espacios muertos */
+    animation: fadeIn 0.8s ease-out;
 }
 
 /* Alerta para Repositorio de Software */
@@ -1286,7 +1343,7 @@ section {
     }
 
     .software-grid {
-        grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: 30px;
     }
 
@@ -1310,7 +1367,7 @@ section {
     }
 
     .software-grid {
-        grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: 30px;
     }
 
