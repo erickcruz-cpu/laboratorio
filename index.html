@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Laboratorios de Cómputo - Gestión</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Slider / Hero Section -->
+    <div class="slider">
+        <!-- Radio botones para el control (truco CSS sin JS) -->
+        <input type="radio" name="radio-btn" id="radio1" checked>
+        <input type="radio" name="radio-btn" id="radio2">
+
+        <div class="slides">
+            <!-- Imágenes del slider -->
+            <div class="slide first">
+                <img src="slider1.jpg" alt="Laboratorio 1">
+                <div class="slide-content">
+                    <h2>Nuestros Docentes</h2>
+                    <p>Profesionales comprometidos con tu formación académica.</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="slider2.jpg" alt="Laboratorio 2">
+                <div class="slide-content">
+                    <h2>Nuestra Institución</h2>
+                    <p>Próximos al licenciamiento institucional....</p>
+                </div>
+            </div>
+
+            <!-- Navegación automática (marcador para CSS) -->
+            <div class="navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+            </div>
+        </div>
+        <!-- Navegación manual -->
+        <div class="navigation-manual">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+        </div>
+
+        <!-- Flechas de navegación -->
+        <button class="prev-btn" id="prev-btn">&#10094;</button>
+        <button class="next-btn" id="next-btn">&#10095;</button>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="computacionSD-150x150.png" alt="Logo Laboratorios">
+        </div>
+        <div class="navbar-clock">
+            <span id="navbar-clock-info">00:00 AM | 01 May</span>
+        </div>
+        <button class="hamburger-menu" id="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#personal">Docentes</a></li>
+            <li><a href="#laboratorios">Laboratorios</a></li>
+            <li><a href="#prohibiciones">Reglamento</a></li>
+            <li><a href="#descargas">Descargas de Software</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sección Inicio (Bienvenida Estudiantes) -->
+    <section id="inicio" class="section">
+        <h1>¡Bienvenidos Estudiantes!</h1>
+        <div class="welcome-container">
+            <p class="intro-text">El camino al éxito profesional se construye con esfuerzo y dedicación. Tu principal deber es el estudio y la práctica constante.</p>
+            
+            <div class="motivation-box">
+                <div class="quote-box">
+                    <p class="quote-text">"En el desarrollo de sistemas de información, el código no es la respuesta final, sino la herramienta para crear soluciones que transforman el mundo."</p>
+                </div>
+                <div class="alert">
+                    <span class="alert-icon">💡</span>
+                    <p class="alert-text">Aprovecha los laboratorios: son el puente entre tus sueños y tu carrera profesional.</p>
+                </div>
+            </div>
+
+            <div class="pillars-grid">
+                <div class="pillar-item">
+                    <span class="pillar-icon">📚</span>
+                    <h4>Disciplina</h4>
+                    <p>La constancia en el estudio es la base de todo gran conocimiento.</p>
+                </div>
+                <div class="pillar-item">
+                    <span class="pillar-icon">🔍</span>
+                    <h4>Curiosidad</h4>
+                    <p>No te limites a lo que ves en clase; investiga, pregunta y descubre.</p>
+                </div>
+                <div class="pillar-item">
+                    <span class="pillar-icon">⚙️</span>
+                    <h4>Práctica</h4>
+                    <p>Aprender haciendo es la forma más efectiva de dominar la tecnología.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Personal (Docentes) -->
+    <section id="personal" class="section bg-light">
+        <h2>Nuestros Docentes</h2>
+        <div class="personal-container">
+            <div class="directivo-card">
+                <h6>Coordinador del Programa Académico de Desarrollo de Sistemas de Información</h6>
+                <div class="card-content">
+                    <p><strong>Ing. OMAR JULIO VALENCIA GALLEGOS</strong></p>
+                    <p>📧 <a href="mailto:omarvalencia@iestp-ppd.edu.pe">omarvalencia@iestp-ppd.edu.pe</a></p>
+                    <p>📧 <a href="mailto:desarrollo_sistemas@iestp-ppd.edu.pe">desarrollo_sistemas@iestp-ppd.edu.pe</a></p>
+                    <p>📞 Cel: 959790288</p>
+                </div>
+            </div>
+            
+            <div class="docentes-grid">
+                <div class="docente-item">
+                    <h6><center>Docente Desarrollo de Sistemas de Información</center></h6>
+                    <p>Ing. CARLOS AUGUSTO TEJADA DIAZ</p>
+                    <p>📧 <a href="mailto:carlostejada@iestp-ppd.edu.pe">carlostejada@iestp-ppd.edu.pe</a></p>
+                </div>
+                <div class="docente-item">
+                    <h6><center>Docente Desarrollo de Sistemas de Información</center></h6>
+                    <p>Ing. GIOVANNI ROLANDO CABRERA MALAGA</p>
+                    <p>📧 <a href="mailto:giovannicabrera@iestp-ppd.edu.pe">giovannicabrera@iestp-ppd.edu.pe</a></p>
+                </div>
+                <div class="docente-item">
+                    <h6><center>Docente Desarrollo de Sistemas de Información</center></h6>
+                    <p>Ing. DUILIO ANDRE CHAVEZ CUARITE</p>
+                    <p>📧 <a href="mailto:duiliochavez@iestp-ppd.edu.pe">duiliochavez@iestp-ppd.edu.pe</a></p>
+                </div>
+                <div class="docente-item">
+                    <h6><center>Docente Desarrollo de Sistemas de Información</center></h6>
+                    <p>Ing. EDWIN CARLOS LEONCIO GAMA QUISPE</p>
+                    <p>📧 <a href="mailto:carlosgama@iestp-ppd.edu.pe">carlosgama@iestp-ppd.edu.pe</a></p>
+                </div>
+                <div class="docente-item">
+                    <h6><center>Docente Desarrollo de Sistemas de Información</center></h6>
+                    <p>Ing. FELICITAS CASTRO CASTRO</p>
+                    <p>📧 <a href="mailto:felicitascastro@iestp-ppd.edu.pe">felicitascastro@iestp-ppd.edu.pe</a></p>
+                </div>
+                <div class="docente-item">
+                    <h6><center>Docente Desarrollo de Sistemas de Información</center></h6>
+                    <p>Ing. ALBERTO EDU FERNANDEZ BERNEDO</p>
+                    <p>📧 <a href="mailto:albertofernandez@iestp-ppd.edu.pe">albertofernandez@iestp-ppd.edu.pe</a></p>
+                </div>
+                <div class="docente-item asistente-item">
+                    <h6><center>Asist. Desarrollo De Sistemas De Información</center></h6>
+                    <p>Ing. ERICK EDSON CRUZ QUISPE</p>
+                    <p>📧 <a href="mailto:erickcruz@iestp-ppd.edu.pe">erickcruz@iestp-ppd.edu.pe</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Laboratorios (Gestión y Soporte) -->
+    <section id="laboratorios" class="section">
+        <h1>Laboratorios de Cómputo</h1>
+        <div class="lab-alert-box">
+            <p class="intro-text">Un espacio diseñado para el apoyo académico de todos los estudiantes.</p>
+        </div>
+        
+        <div class="card-container">
+            <div class="card">
+                <div class="card-icon">🎯</div>
+                <h3>Nuestro Objetivo</h3>
+                <p>Brindarles un entorno tecnológico equipado donde puedan desarrollar sus conocimientos, realizar investigaciones y fortalecer sus habilidades técnicas.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🛠️</div>
+                <h3>Soporte Técnico</h3>
+                <p>Como asistente de laboratorio, estoy aquí para asegurar que tu experiencia de aprendizaje sea fluida y cuentes con el soporte necesario en cada sesión.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Prohibiciones (Reglamento) -->
+    <section id="prohibiciones" class="section bg-light">
+        <h2>Reglamento y Normas</h2>
+        <div class="grid-normas">
+            <div class="norma-item">
+                <span class="norma-icon">⚠️</span>
+                <span>Prohibido el ingreso de alimentos y bebidas.</span>
+            </div>
+            <div class="norma-item">
+                <span class="norma-icon">⚠️</span>
+                <span>No manipular cables de red o conexiones eléctricas.</span>
+            </div>
+            <div class="norma-item">
+                <span class="norma-icon">⚠️</span>
+                <span>Prohibido cambiar la configuración del hardware.</span>
+            </div>
+            <div class="norma-item">
+                <span class="norma-icon">⚠️</span>
+                <span>No instalar software sin autorización previa.</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Descargas -->
+    <section id="descargas" class="section">
+        <h2>Repositorio de Software</h2>
+        <div class="software-alert">
+            <span class="alert-icon-software">📥</span>
+            <p>Descarga tus herramientas en tu ordenador personal o de casa para que practiques constantemente.</p>
+        </div>
+        
+        <div class="software-grid">
+            <div class="software-card software-card-small">
+                <div class="sw-icon">☕</div>
+                <h4> Java JDK</h4>
+                <p>Kit de desarrollo Java</p>
+                <a href="https://drive.google.com/drive/folders/1plT7mnFbefU6MtDnWK3TDLEpwPY9eXKc?usp=sharing" target="_blank" class="btn-sm">Descargar</a>
+            </div>
+            <div class="software-card software-card-small">
+                <div class="sw-icon">🗄️</div>
+                <h4>SQL</h4>
+                <p>Gestor de bases de datos</p>
+                <a href="https://drive.google.com/drive/folders/1cR0zHTjMVHNxbSeAXCi8jlc7bT8M9j5E?usp=drive_link" target="_blank" class="btn-sm">Descargar</a>
+            </div>
+            <div class="software-card software-card-small">
+                <div class="sw-icon">🐍</div>
+                <h4>Python</h4>
+                <p>Intérprete oficial Python</p>
+                <a href="https://drive.google.com/drive/folders/1zuSH1ScEUfr6SIgwsxNDsbBSBPS9ezoE?usp=drive_link" target="_blank" class="btn-sm">Descargar</a>
+            </div>
+            <div class="software-card software-card-small">
+                <div class="sw-icon">💻</div>
+                <h4>VS Code</h4>
+                <p>Editor de código ligero</p>
+                <a href="https://drive.google.com/drive/folders/1LPWzY_TK-ASev0fhGW9ja-OctGrguIvR?usp=drive_link" target="_blank" class="btn-sm">Descargar</a>
+            </div>
+            <div class="software-card software-card-small">
+                <div class="sw-icon">📝</div>
+                <h4>Pseudocodigo</h4>
+                <p>escribir pseudocódigo</p>
+                <a href="https://drive.google.com/drive/folders/1u5sTTjuQVSceIHbCw1Q8O1qNiEaj4cK4?usp=drive_link" target="_blank" class="btn-sm">Descargar</a>
+            </div>
+        </div>
+
+       <!--
+         <div class="download-container" style="margin-top: 50px;">
+            <a href="#" target="_blank" class="btn-download">
+                Ver Carpeta Completa (Google Drive)
+            </a>
+            <p><small>* El acceso requiere cuenta institucional. (Reemplaza el href con el enlace real de Google Drive)</small></p>
+        </div>
+       -->
+    </section>
+
+    <footer>
+        <p>&copy; IESTP Pedro P. Díaz</p>
+        <p>Creado por: <strong>Ing. Erick Cruz</strong></p>
+    </footer>
+
+    <script src="slider.js"></script>
+    <script src="menu.js"></script>
+    <script src="clock.js"></script>
+
+</body>
+</html>
