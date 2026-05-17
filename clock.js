@@ -26,3 +26,10 @@ setInterval(updateClock, 1000);
 
 // Llamar una vez al cargar para no esperar 1 segundo
 updateClock();
+
+// Forzar que la página siempre cargue desde el inicio (Slider)
+window.onload = function() {
+    setTimeout(function() {
+        window.scrollTo(0, 0);
+    }, 10);
+};
